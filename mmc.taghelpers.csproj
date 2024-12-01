@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net9.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<!-- <PackageType>Template</PackageType> -->
+		<PackageId>mmc.TagHelpers</PackageId>
+		<PackageVersion>1.0.0</PackageVersion>
+		<TargetFramework>net9.0</TargetFramework>
+		<IsPackable>true</IsPackable>
+		<Title>Asp.Net Core Tag Heplers</Title>
+		<Authors>Emre Mumcu</Authors>
+		<Company>mumcu.net</Company>
+		<Description>A handy set of Asp.Net Core TagHelper Collection</Description>
+		<RepositoryUrl>https://github.com/emre-mumcu/mmc.taghelpers.git</RepositoryUrl>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageTags>mmc; mumcu.net; aspnetcore; taghelpers;</PackageTags>
+		<Copyright>Copyright © 2024</Copyright>
+		<PackageProjectUrl>https://emre-mumcu.github.io</PackageProjectUrl>
+		<PackageReadmeFile>readme.md</PackageReadmeFile>
+		<PackageIcon>mmc-icon.png</PackageIcon>
+		<IncludeContentInPack>true</IncludeContentInPack>
+		<IncludeBuildOutput>false</IncludeBuildOutput>
+		<EnableDefaultContentItems>false</EnableDefaultContentItems>
+		<NoDefaultExcludes>true</NoDefaultExcludes>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Content Include="**\**" Exclude="**\bin\**;**\obj\**;**\.vs\**;**\.git\**" />
+		<Content Remove=".gitignore; .gitattributes; editorconfig;" />
+		<None Include="mmc-icon.png" Pack="true" PackagePath="\" />
+		<None Include="readme.md" Pack="true" PackagePath="\" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<FrameworkReference Include="Microsoft.AspNetCore.App" />
+	</ItemGroup>
+
+</Project>
